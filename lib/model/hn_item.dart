@@ -37,7 +37,7 @@ class HnItem {
       : itemId = map['id'],
         title = map['title'] ?? '',
         user = map['by'] ?? '',
-        kids = map['kids'] ?? <int>[],
+        kids = map['kids'] != null ? new List<int>.from(map['kids']) : [],
         score = map['score'] ?? 0,
         url = map['url'] ?? '',
         text = formatText(map['text'] ?? ''),

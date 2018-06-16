@@ -51,8 +51,7 @@ class LiveHnStoryRepository extends HnStoriesRepository {
           "Error while getting stories [StatusCode:$statusCode]");
     }
 
-    final List<int> storiesList = jsonCodec.decode(response.body);
-
+    final storiesList = List<int>.from(json.decode(response.body));
     return new HnStories.fromList(storyType, storiesList);
   }
 }

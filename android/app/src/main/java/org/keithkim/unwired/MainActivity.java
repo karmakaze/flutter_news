@@ -1,4 +1,4 @@
-package com.yourcompany.flutter_news;
+package org.keithkim.unwired;
 
 import android.os.Bundle;
 
